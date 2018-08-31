@@ -7,8 +7,26 @@
 </head>
 
 <body>
+    <main>
+        <h1>MotCroiZ'aide</h1>
+        <div id="searchArrea">
+            <div id="letterList">
+                <input type="text" id="l1" size=1 maxlength="1" class="letter">
+                <input type="text" id="l2" size=1 maxlength="1" class="letter">
+                <input type="text" id="l3" size=1 maxlength="1" class="letter">
+                <input type="text" id="l4" size=1 maxlength="1" class="letter">
+            </div>
+            <button id="addLetterButton">+</button>
+            <button id="deleteLetterButton">-</button>
+        </div>
+        
+        <button id="searchBtn">Chercher les mots correspondants </button>
+        <button id="renitializeBtn">Rénitialiser </button>
+        <div class="res"></div>
+    </main>
 </body>
 <script src="JS/p5.min.js"></script>
 <script src="JS/p5.dom.js"></script>
 <script src="JS/search.js"></script>
+<script src="JS/sketch.js"></script>
 </html>
