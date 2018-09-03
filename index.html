@@ -4,25 +4,38 @@
 <head>
     <meta charset="utf-8" />
     <title>MotCroiZ'aide</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <h1>MotCroiZ'aide</h1>
-        <div id="searchArrea">
-            <div id="inputList">
-                <input type="text" id="l1" size=1 maxlength="1" class="letter">
-                <input type="text" id="l2" size=1 maxlength="1" class="letter">
-                <input type="text" id="l3" size=1 maxlength="1" class="letter">
-                <input type="text" id="l4" size=1 maxlength="1" class="letter">
+    <main class="container">
+        <h1>Motcroiz'aide</h1>
+    
+        <div class="pannel pannel-default">
+            <div class="pannel-body" id="searchArea">
+                <div class="pannel-heading">
+                    recharger
+                    <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                </div>
+                <div id="inputList" class="control">
+                    <input type="text" id="l1" size=1 maxlength="1" class="letter">
+                    <input type="text" id="l2" size=1 maxlength="1" class="letter">
+                    <input type="text" id="l3" size=1 maxlength="1" class="letter">
+                    <input type="text" id="l4" size=1 maxlength="1" class="letter">
+                </div>
+                <div class="control">
+                    <button id="addLetterButton" class="btn btn-default">+</button>
+                    <button id="deleteLetterButton" class="btn btn-default">-</button>
+                </div>
+                <div class="control">
+                    <button id="searchBtn" class="btn btn-success">Chercher</button>
+                </div>
+
+                <div id="res"></div>
             </div>
-            <button id="addLetterButton">+</button>
-            <button id="deleteLetterButton">-</button>
         </div>
-        
-        <button id="searchBtn">Chercher les mots correspondants </button>
-        <button id="renitializeBtn">Rénitialiser </button>
-        <div class="res"></div>
+    
     </main>
 </body>
 <script src="JS/p5.min.js"></script>

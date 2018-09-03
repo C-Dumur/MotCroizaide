@@ -1,0 +1,14 @@
+.control{
+    padding: 8px;
+}
+
+.letter{
+    height: 35px;
+    width: 35px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.pannel-heading{
+    text-align: right;
+}

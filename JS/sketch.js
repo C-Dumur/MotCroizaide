@@ -58,8 +58,13 @@ function search() {
     let div = createDiv('Liste de mot possibles');
     div.attribute('id', 'res');
 
+    // On ajoute la liste au panel
+    let panel = select("#searchArea");
+    panel.child(div); 
+
 
     let liste = createElement('ul');
+    div.child(liste);
 
     let indice_last_word = 12;
     let word;
