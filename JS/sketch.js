@@ -23,6 +23,10 @@ function setup() {
     // Valider la recherche
     let searchBtn = select("#searchBtn");
     searchBtn.mouseClicked(search);
+
+    // Rénitialiser la recherche
+    let resetBtn = select("#reset");
+    resetBtn.mouseClicked(reset);
 }
 
 /**
@@ -54,6 +58,11 @@ function search() {
     maRegex = new RegExp(regex, "g");
     let array_res = dico.match(maRegex);
 
+    // Si une recherche a déjà été effectuée
+    if(select('#res')){
+        clearResultList();
+    }
+
     // Création de la div d'affichage des résultats
     let div = createDiv('Liste de mot possibles');
     div.attribute('id', 'res');
@@ -70,7 +79,7 @@ function search() {
     let word;
 
     if (array_res.length <= 12) {
-        let indice_last_word = array_res.length;
+        let indice_last_word = array_res.length - 1;
     }
 
     for (let i = 0; i < indice_last_word; i++) {

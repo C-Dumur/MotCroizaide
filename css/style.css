@@ -12,3 +12,11 @@
 .pannel-heading{
     text-align: right;
 }
+
+#reset{
+    cursor: pointer;
+}
+
+#reset:hover{
+   font-size: 1.2em;
+}

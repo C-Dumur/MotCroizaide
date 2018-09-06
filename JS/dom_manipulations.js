@@ -34,3 +34,35 @@ function deleteLetter() {
     inputToRemove.remove();
     idCurrentLastLetter--;
 }
+
+/**
+ * Efface la liste le contenu de la liste de résultat
+ */
+function clearResultList() {
+    let resDiv = select('#res');
+    resDiv.remove();
+}
+
+/**
+ * Efface la zone de recherche et en créer une nouvelle avec 4 lettres
+ * Efface la zone d'affichage des resultats
+ */
+function reset(){
+    if(select('#res')){
+        clearResultList();
+    }
+    
+    let letters = selectAll('.letter');
+
+    for (let i = 0; i < letters.length; i++) {
+        letters[i].remove();
+    }
+
+    let inp;
+    for (let j = 1; j < 5; j++) {
+        inp = createInputLetter(j)
+        inputList.child(inp);
+    }
+
+    idCurrentLastLetter = 4;
+}
