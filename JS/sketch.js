@@ -32,7 +32,6 @@ function setup() {
 /**
  * Récupère les information saisies dans les inputs
  * Effectue la recherche de mots correspondant dans le dico
- * Affiche les 12 premiers résultats
  * 
  */
 function search() {
@@ -63,29 +62,11 @@ function search() {
         clearResultList();
     }
 
-    // Création de la div d'affichage des résultats
-    let div = createDiv('Liste de mot possibles');
-    div.attribute('id', 'res');
+    let res = createResultDiv();
 
     // On ajoute la liste au panel
     let panel = select("#searchArea");
-    panel.child(div); 
+    panel.child(res);
 
-
-    let liste = createElement('ul');
-    div.child(liste);
-
-    let indice_last_word = 12;
-    let word;
-
-    if (array_res.length <= 12) {
-        let indice_last_word = array_res.length - 1;
-    }
-
-    for (let i = 0; i < indice_last_word; i++) {
-        // Creation d'element de liste
-        word = array_res[i].replace('\n', '');
-        liste.child(createElement('li', word));
-    }
-
+    fillList(array_res);
 }
